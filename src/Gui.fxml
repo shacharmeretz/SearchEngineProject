@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.VBox?>
+
+<BorderPane fx:id="mainPain" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="762.0" prefWidth="625.0" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="viewController">
+    <left>
+        <VBox prefHeight="672.0" prefWidth="625.0" BorderPane.alignment="CENTER">
+            <children>
+                <Label prefHeight="17.0" prefWidth="149.0" text="Please fill the next fields:" />
+                <Label prefHeight="17.0" prefWidth="159.0" text="enter the path of the corpus:" />
+                <Button fx:id="btn_searchPathToCorpus" mnemonicParsing="false" onAction="#browseCorpus" text="search" />
+                <TextField fx:id="pathToCorpus" />
+                <Label prefHeight="17.0" prefWidth="443.0" text="enter the path where you want the posting file will be:" />
+                <Button fx:id="btn_searchPathToPosting" mnemonicParsing="false" onAction="#browsePostingFile" text="search" />
+                <TextField fx:id="pathToDirectory" />
+
+                <CheckBox fx:id="stemming" mnemonicParsing="false" onAction="#ifStemming" text="stemming" />
+                <Button fx:id="startMakeDictionary" focusTraversable="false" layoutX="26.0" layoutY="55.0" mnemonicParsing="false" onAction="#startMakeDic" prefHeight="25.0" prefWidth="122.0" text="start" />
+                <Button fx:id="btn_delete" focusTraversable="false" mnemonicParsing="false" onAction="#deleteAll" prefHeight="25.0" prefWidth="122.0" text="delete all" />
+                <Button fx:id="btn_showTheDic" focusTraversable="false" mnemonicParsing="false" onAction="#showTheDic" prefHeight="25.0" prefWidth="123.0" text="show the dictionary" />
+                <Button fx:id="btn_toTheComputer" focusTraversable="false" mnemonicParsing="false" onAction="#loadTheDic" prefHeight="25.0" prefWidth="123.0" text="load dictioanry" />
+                <Label prefHeight="17.0" prefWidth="159.0" text="enter the path of the queries:" />
+                <Button fx:id="btn_searchPathToQueries" mnemonicParsing="false" onAction="#browseQueries" text="search" />
+                <TextField fx:id="pathToquery" />
+                <Button fx:id="btn_startQuerys" focusTraversable="false" mnemonicParsing="false" onAction="#startQuerys" prefHeight="25.0" prefWidth="122.0" text="start queries" />
+                <Label prefHeight="17.0" prefWidth="159.0" text="enter the query:" />
+                <TextField fx:id="query" />
+                <Button fx:id="btn_startQuery" focusTraversable="false" mnemonicParsing="false" onAction="#startQuery" prefHeight="25.0" prefWidth="122.0" text="start query" />
+                <CheckBox fx:id="ifsemanticWithNoInternet" mnemonicParsing="false" onAction="#ifSemanticWithNoInternet" prefHeight="17.0" prefWidth="150.0" text="semantic with internet" />
+            <CheckBox fx:id="ifsemanticWithInternet" mnemonicParsing="false" onAction="#semanticWithInternet" prefHeight="17.0" prefWidth="158.0" text="semantic with no internet" />
+                <Button fx:id="btn_startMakeName" focusTraversable="false" mnemonicParsing="false" onAction="#showQuery" prefHeight="25.0" prefWidth="149.0" text="choose the query" />
+            <ChoiceBox fx:id="choiceBoxForQuery" prefWidth="150.0" />
+            <Button fx:id="btn_startMakeName" focusTraversable="false" mnemonicParsing="false" onAction="#showDoc" prefHeight="25.0" prefWidth="149.0" text="choose the document" />
+            <ChoiceBox fx:id="choiceBoxForDoc" prefWidth="150.0" />
+            <Button fx:id="btn_startMakeName" focusTraversable="false" mnemonicParsing="false" onAction="#showEntity" prefHeight="25.0" prefWidth="150.0" text="show the entity" />
+            </children></VBox>
+    </left>
+   <center>
+      <ComboBox prefWidth="150.0" BorderPane.alignment="CENTER" />
+   </center>
+</BorderPane>
